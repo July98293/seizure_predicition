@@ -1,6 +1,6 @@
 # Patient-Specific Seizure Prediction on CHB-MIT
 
-A reproducible EEG **seizure prediction** pipeline on the [CHB-MIT Scalp EEG Database](https://physionet.org/content/chbmit/1.0.0/). The model learns to separate **preictal** EEG (the minutes leading up to a seizure) from **interictal** EEG (seizure-free periods) — and is evaluated at the seizure level with a leakage-free cross-validation scheme.
+A reproducible EEG **seizure prediction** pipeline on the [CHB-MIT Scalp EEG Database](https://physionet.org/content/chbmit/1.0.0/). The model learns to separate **preictal** EEG (the minutes leading up to a seizure) from **interictal** EEG (seizure-free periods)  and is evaluated at the seizure level with a leakage-free cross-validation scheme.
 
 ## What it does
 
