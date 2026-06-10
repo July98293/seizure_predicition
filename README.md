@@ -35,7 +35,7 @@ A 5% per-window false-positive rate becomes ~18 false alarms/hour at 360 windows
 
 Defaults: 10-minute moving average, threshold 0.6, 30-minute refractory period.
 
-## Results (patient `chb01`)
+## Results (test only to patient `chb01`, is a ty model)
 
 | Metric | Value |
 |---|---|
@@ -43,7 +43,6 @@ Defaults: 10-minute moving average, threshold 0.6, 30-minute refractory period.
 | False-alarm rate | **0.12 / hour** (8 interictal hours) |
 | Window-level pooled AUC | 0.96 |
 
-Two honest caveats:
 
 - The single missed seizure (`chb01_21`) its onset is at 327 s, so the 35-minute preictal segment falls almost entirely before the file begins, leaving only 2 usable windows. No classifier can fire without signal.
 - The 0.12/hour rate rests on a **single** false alarm across 8 hours; its confidence interval is wide. It would require more data
@@ -67,7 +66,7 @@ Outputs a per-run summary (CSV + JSON) with sensitivity, false-alarm rate, and c
 
 ## Limitations & next steps
 
-This is a **single-patient proof of concept**. Seizure prediction is strongly patient-specific, so results must not be generalized without more data, a chort wide evaluation and a more deep model.
+This is a **single-patient proof of concept**. Seizure prediction is strongly patient-specific, so results can't be generalized without more data, a chort wide evaluation and a more deep model.
 
 ## Data & references
 
