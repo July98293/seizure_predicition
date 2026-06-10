@@ -1,6 +1,6 @@
 # Patient-Specific Seizure Prediction on CHB-MIT
 
-A reproducible EEG **seizure prediction** pipeline on the [CHB-MIT Scalp EEG Database](https://physionet.org/content/chbmit/1.0.0/). The model learns to separate **preictal** EEG (the minutes leading up to a seizure) from **interictal** EEG (seizure-free periods) — making it prediction rather than detection — and is evaluated at the seizure level with a leakage-free cross-validation scheme.
+A reproducible EEG **seizure prediction** pipeline on the [CHB-MIT Scalp EEG Database](https://physionet.org/content/chbmit/1.0.0/). The model learns to separate **preictal** EEG (the minutes leading up to a seizure) from **interictal** EEG (seizure-free periods) — and is evaluated at the seizure level with a leakage-free cross-validation scheme.
 
 ## What it does
 
@@ -31,7 +31,7 @@ Windows from the same recording then leak across train and test, and the model s
 
 ### From windows to alarms (firing power)
 
-A 5% per-window false-positive rate becomes ~18 false alarms/hour at 360 windows/hour — useless. Instead of trusting single windows, per-window probabilities are smoothed with a moving average (firing power), and an alarm fires only when it stays above threshold, followed by a refractory period. Isolated false positives cancel out. A seizure is counted as **predicted** if any alarm fires within its preictal window.
+A 5% per-window false-positive rate becomes ~18 false alarms/hour at 360 windows/hour. So the per-window probabilities are smoothed with a moving average (firing power), and an alarm fires only when it stays above threshold, followed by a refractory period. Isolated false positives cancel out. A seizure is counted as **predicted** if any alarm fires within its preictal window.
 
 Defaults: 10-minute moving average, threshold 0.6, 30-minute refractory period.
 
