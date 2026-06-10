@@ -1,0 +1,2 @@
+patient,window_sec,preictal_min,sph_min,notch_hz,n_channels,n_seizures,seizures_predicted,sensitivity_per_seizure,false_alarms,interictal_hours,fpr_per_hour,fp_threshold,fp_window
+chb01,10,30,5,60,17,7,6,0.857,1,8.0,0.125,0.6,60
